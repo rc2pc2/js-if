@@ -1,19 +1,19 @@
 
 // // AND
-// console.log( (4 == 4) && (3 == 3) ); // true
-// console.log( (4 == 4) && (2 == 3) ); // false
-// console.log( (3 == 4) && (3 == 3) ); // false
-// console.log( (3 == 4) && (2 == 3) ); // false
+// console.log( true && true ); // true
+// console.log( true && false ); // false
+// console.log( false && true ); // false
+// console.log( false && false ); // false
 
 // // OR
-// console.log( (4 == 4) || (3 == 3) ); // true
-// console.log( (4 == 4) || (2 == 3) ); // true
-// console.log( (3 == 4) || (3 == 3) ); // true
-// console.log( (3 == 4) || (2 == 3) ); // false
+// console.log( true || true ); // true
+// console.log( true || false ); // true
+// console.log( false || true ); // true
+// console.log( false || false ); // false
 
 // // NOT
-// console.log( 4 == 4) // true
-// console.log( !(4 == 4)) // false
+// console.log( true ) // true
+// console.log( !true) // false
 // console.log( !false ) // true
 
 
@@ -61,3 +61,17 @@
 //     console.log('Le due parole hanno la medesima lunghezza');
 // }
 
+// età: chiedere all'utente con due prompt gli anni di due persone e comunicare quale delle due è più grande
+
+const firstAge = parseInt( prompt('Inserisci età della prima persona') );
+const secondAge = parseInt( prompt('Inserisci età della prima persona') );
+
+if ( firstAge > secondAge) {
+    console.log('La prima persona è la più grande');
+} else  if (firstAge < secondAge) {
+    console.log('La seconda persona è la più grande');
+} else if ( isNaN(firstAge) || isNaN(secondAge) ){
+    console.log("C'è un errore nella scrittura dei dati");
+} else {
+    console.log('La persone hanno la stessa età');
+}
