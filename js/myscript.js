@@ -66,12 +66,16 @@
 const firstAge = parseInt( prompt('Inserisci età della prima persona') );
 const secondAge = parseInt( prompt('Inserisci età della prima persona') );
 
-if ( firstAge > secondAge) {
-    console.log('La prima persona è la più grande');
+let result;
+
+if ( isNaN(firstAge) || isNaN(secondAge) ) {
+    result = "C'è un errore nella scrittura dei dati";
 } else  if (firstAge < secondAge) {
-    console.log('La seconda persona è la più grande');
-} else if ( isNaN(firstAge) || isNaN(secondAge) ){
-    console.log("C'è un errore nella scrittura dei dati");
+    result = 'La seconda persona è la più grande';
+} else if (firstAge > secondAge ){
+    result = 'La prima persona è la più grande';
 } else {
-    console.log('La persone hanno la stessa età');
+    result = 'La persone hanno la stessa età';
 }
+
+document.getElementById('output').innerHTML +=  result;
